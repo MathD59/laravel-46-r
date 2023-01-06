@@ -41,7 +41,7 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
-ini_set('curl.cainfo', '/path/to/cacert.pem');
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
