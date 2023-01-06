@@ -18,7 +18,11 @@ class UserController extends Controller
             'password' => 'required',
             ]);
         // echo('die');
-            $user = User::create(request(['name', 'email', 'password']));
+        $data = request(['name', 'email']);
+
+        $data['password'] = Hash::make($request->password);
+
+        $user = User::create($data);
 
             $token = $user->createToken('My Token')->accessToken;
             return response()->json(['token' => $token], 200);
