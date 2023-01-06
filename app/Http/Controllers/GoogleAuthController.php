@@ -31,11 +31,11 @@ class GoogleAuthController extends Controller
                     'email' => $google_user->getEmail(),
                     'google_id' => $google_user->getId(),
                 ]);
-                // $token = $new_user->createToken('My Token')->accessToken;
-                // return response()->json(['token' => $token], 200);
+                $token = $new_user->createToken('My Token')->accessToken;
+                return response()->json(['token' => $token], 200);
             } else {
-                // $token = $user->createToken('My Token')->accessToken;
-                // return response()->json(['token' => $token], 200);
+                $token = $user->createToken('My Token')->accessToken;
+                return response()->json(['token' => $token], 200);
             }
         } catch (Exception $e) {
             dd($e->getMessage());
