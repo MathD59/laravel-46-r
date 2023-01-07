@@ -24,12 +24,10 @@
                     </div>
 
                     <?php 
-                    $tuCurl = curl_init();
-                    curl_setopt($tuCurl, CURLOPT_CAINFO, getcwd() . "/cacert.pem");
-                    $tuData = curl_exec($tuCurl);
-                    curl_close($tuCurl);
-                    // ini_set('curl.cainfo', './cacert.pem');
-                    
+                   
+                    ini_set('curl.cainfo', '../cacert.pem');
+                    ini_set('curl.cainfo', '../cacert.pem');
+                    ini_set('curl.cainfo', '../cacert.pem');
                         phpinfo();
                     ?> 
 
