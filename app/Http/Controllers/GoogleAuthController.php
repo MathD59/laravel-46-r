@@ -6,10 +6,7 @@ use App\Models\User;
 
 use Exception;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
-use Laravel\Socialite\Two\AbstractProvider;
 
 class GoogleAuthController extends Controller
 {
