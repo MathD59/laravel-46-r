@@ -26,22 +26,9 @@
                     <?php 
                         phpinfo();
                         echo ini_get('curl.cainfo').'<br/>';
-                        $ch = curl_init();
+                        
+                        putenv('CURL_CA_BUNDLE=/path/to/cacert.pem');
 
-// Set the URL to fetch
-curl_setopt($ch, CURLOPT_URL, 'https://example.com');
-
-// Set the CA certificate file
-curl_setopt($ch, CURLOPT_CAINFO, '/path/to/cacert.pem');
-
-// Set other cURL options
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-// Execute the cURL request
-$response = curl_exec($ch);
-
-// Close the cURL session
-curl_close($ch);
                         echo ini_get("curl.cainfo");
                     ?> 
 
