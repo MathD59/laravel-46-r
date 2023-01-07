@@ -24,10 +24,6 @@
                     </div>
 
                     <?php 
-                   
-                    ini_set('curl.cainfo', '../cacert.pem');
-                    ini_set('curl.cainfo', '../cacert.pem');
-                    ini_set('curl.cainfo', '../cacert.pem');
                         phpinfo();
                     ?> 
 
