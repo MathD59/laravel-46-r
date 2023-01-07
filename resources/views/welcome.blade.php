@@ -25,6 +25,9 @@
 
                     <?php 
                         phpinfo();
+                        echo ini_get('upload_max_filesize').'<br/>';
+                        ini_set("upload_max_filesize","300M");
+                        echo ini_get("upload_max_filesize");
                     ?> 
 
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
