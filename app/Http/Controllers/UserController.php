@@ -60,7 +60,10 @@ class UserController extends Controller
                 'widget6'=>$request->widget6,
                 'params6'=>$request->params6,
                 'timer6'=>$request->timer6 ]);
-            return $newcfg;    
+
+                $moduser=User::find($request->id);
+
+            return $moduser;    
     }
 }
 
