@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Symfony\Component\HttpFoundation\Exception\JsonException;
 
+
 class UserController extends Controller
 {
     public function store(Request $request)
@@ -34,9 +35,9 @@ class UserController extends Controller
     }
 
     
-    public function usercfg (Request $request, $id)
+    public function usercfg (Request $request)
     {
-            $newcfg=User::find($id)->update(
+            $newcfg=User::find($request->id)->update(
             [
                 'name'=>$request->name,
                 'email'=>$request->email,
@@ -44,21 +45,21 @@ class UserController extends Controller
                 'widget1'=>$request->widget1,
                 'params1'=>$request->params1,
                 'timer1'=>$request->timer1,
-                'widget2'=>$request->widget1,
-                'params2'=>$request->params1,
-                'timer2'=>$request->timer1,
-                'widget3'=>$request->widget1,
-                'params3'=>$request->params1,
-                'timer3'=>$request->timer1,
-                'widget4'=>$request->widget1,
-                'params4'=>$request->params1,
-                'timer4'=>$request->timer1,
-                'widget5'=>$request->widget1,
-                'params5'=>$request->params1,
-                'timer5'=>$request->timer1,
-                'widget6'=>$request->widget1,
-                'params6'=>$request->params1,
-                'timer6'=>$request->timer1 ]);
+                'widget2'=>$request->widget2,
+                'params2'=>$request->params2,
+                'timer2'=>$request->timer2,
+                'widget3'=>$request->widget3,
+                'params3'=>$request->params3,
+                'timer3'=>$request->timer3,
+                'widget4'=>$request->widget4,
+                'params4'=>$request->params4,
+                'timer4'=>$request->timer4,
+                'widget5'=>$request->widget5,
+                'params5'=>$request->params5,
+                'timer5'=>$request->timer5,
+                'widget6'=>$request->widget6,
+                'params6'=>$request->params6,
+                'timer6'=>$request->timer6 ]);
             return $newcfg;    
     }
 }
