@@ -35,6 +35,7 @@ return [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => 'https://laravel-production-797c.up.railway.app/auth/google/call-back',
+        // 'redirect' => 'http://localhost:8000/auth/google/call-back',
     ],
 
 ];
